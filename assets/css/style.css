@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    height: 100vh; 
+    background-color: #18181b; 
+}
+
+#container {
+    display: flex; 
+    align-items: center; 
+    gap: 3.5rem; 
+    flex-wrap: wrap; 
+}
+
+#img img {
+    width: 28rem; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem; 
+    padding: 1.5rem; 
+    color: #f8fafc; 
+    background-color: #262626; 
+    border-radius: 8px; 
+    width: 45rem; 
+    max-width: 90%; 
+}
+
+#form {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+}
+
+#title {
+    font-size: 1.8rem; 
+    position: relative; 
+}
+
+#title::after {
+    position: absolute; 
+    content: '';
+    background-color: #ff00c6; 
+    width: 28.3rem; 
+    height: 2px; 
+    bottom: 0; 
+    left: 0; 
+    border-radius: 3px; 
+}
+
+.input-box label {
+    font-size: 1rem; 
+    color: #cbd5e1; 
+    font-weight: 500; 
+}
+
+.input-row {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 1.2rem; 
+}
+
+.input-box {
+    flex: 1; 
+}
+
+.input-box.extra {
+    flex: 0; 
+}
+
+.input-field {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #3f3f46; 
+    padding: 0.3rem; 
+    border-radius: 3px; 
+    margin-top: 3px; 
+    width: 100%; 
+}
+
+.input-field input, .input-field select {
+    background-color: transparent; 
+    border: none; 
+    width: 100%; 
+    font-size: 1rem; 
+    color: #f8fafc; 
+    padding: 0 0.3rem; 
+    outline: none; 
+}
+
+.input-field input:focus, .input-field select:focus {
+    background-color: transparent; 
+}
+
+.input-field select {
+    color: #f8fafc; 
+}
+
+.input-field select option {
+    background-color: #3f3f46; 
+    color: #f8fafc; 
+}
+
+.input-field select:focus {
+    background-color: #3f3f46; 
+    color: #18181b; 
+}
+
+.input-field select:focus option {
+    background-color: #3f3f46; 
+    color: #f8fafc; 
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none; 
+}
+
+#calculate {
+    border: none; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    background-color: #ff00c6; 
+    color: #f8fafc; 
+    padding: 0.3rem 0; 
+    border-radius: 3px; 
+    cursor: pointer; 
+}
+
+#infos {
+    margin-top: 1rem; 
+}
+
+#result {
+    display: flex; 
+    gap: 1.5rem; 
+    align-items: center; 
+    border-top: 1px solid #ffffff34; 
+    padding: 0.75rem 0; 
+}
+
+#bmi {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+    font-size: 2.25rem; 
+}
+
+#bmi span:last-child {
+    font-size: 1rem; 
+    color: #cbd5e1; 
+}
+
+#description {
+    width: 15.5rem; 
+    font-size: 2.75rem; 
+}
+
+#more_info {
+    border-top: 1px solid #ffffff34; 
+    padding-top: 1.5rem; 
+}
+
+#more_info a {
+    color: #ff00c6; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 0.6rem; 
+    font-size: 1.20rem; 
+    text-decoration: none; 
+    transition: color 0.5s; 
+}
+
+#more_info a:hover {
+    color: #cbd5e1; 
+}
+
+.hidden {
+    display: none; 
+}
+
+.unit {
+    font-size: 0.7em; 
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    #img {
+        display: none; 
+    }
+    
+    #container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #calculator {
+        width: calc(100% - 2rem); 
+        margin: 0 1rem; 
+        padding: 1rem; 
+    }
+
+    #title {
+        font-size: 1.5rem; 
+    }
+
+    #bmi {
+        font-size: 1.8rem; 
+    }
+
+    #description {
+        font-size: 2rem; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        width: 100%; 
+        align-items: center; 
+    }
+
+    #calculator {
+        width: 100%; 
+        border-radius: 0; 
+        padding: 1rem; 
+    }
+
+    #title {
+        font-size: 1.2rem; 
+    }
+
+    #title::after {
+        width: 100%; 
+    }
+
+    .input-row {
+        flex-direction: column; 
+    }
+
+    .input-box {
+        margin-bottom: 1rem; 
+    }
+
+    .input-box:first-child {
+        margin-bottom: 1.5rem; 
+    }
+
+    .input-field input,
+    .input-field select {
+        font-size: 0.8rem; 
+    }
+
+    #calculate {
+        font-size: 0.8rem; 
+    }
+
+    #description {
+        font-size: 1.8rem; 
+        width: 100%; 
+        text-align: center; 
+    }
+
+    #more_info a {
+        font-size: 0.9rem; 
+    }
+}
