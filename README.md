@@ -1,9 +1,9 @@
 # Calculadora de GET
 
-Trata-se de uma calculadora para estimativa de gasto calórico.
+Aplicação web para cálculo de gasto energético total (GET), desenvolvida com HTML, CSS e JavaScript.
 
 ## Introdução
-O projeto em questão é um software para calcular gastos calóricos, desenvolvido com HTML, CSS e JavaScript. Para rodar o projeto em sua máquina, não são necessários requisitos especiais, apenas um navegador moderno.
+Este projeto foi desenvolvido para estimar o gasto calórico diário com base em informações como gênero, peso, altura, idade e nível de atividade física.
 
 ## Instalação
 Após clonar o projeto, você pode abrir o arquivo `index.html` diretamente em seu navegador. Não há necessidade de instalação de pacotes ou configurações adicionais.
